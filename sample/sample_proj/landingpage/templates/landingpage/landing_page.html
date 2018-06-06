@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+	<title>Google</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href="../../static/landingpage/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/my-login.css">
+</head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+<body>
+
+	<header>
+		<ul>
+			<li><a href="{% url 'login' %}"><b>Sign In</b></a></li>
+			<li><a href="{% url 'register' %}"><b>Register</b></a></li>
+		</ul>
+	</header>
+
+<div class="container">
+	<section id="main">
+		<center>
+		<div id="image">
+			<img id="logo" src="{% static  'account/img/logo.png'%}"/>
+		</div>
+		<div id="search-entry">
+			<form action="#" method="GET" name="search_entry">
+				<input type="text" id="search_box">
+						<button type="submit" class="search_button">Search</button>
+			</form>
+		</div>
+		</center>
+	</section>
+</div>
+
+	<center>
+	<div id="footer">
+		Copyright &copy; 2017 &mdash; Sample Project
+	</div>
+	</center>
+</body>
+
+</html>

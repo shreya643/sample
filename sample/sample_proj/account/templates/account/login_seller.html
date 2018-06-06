@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="{% static  'account/bootstrap/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static  'account/css/my-login.css'%}">
+<body>
+
+<div class="w3-container">
+    <h2>Login</h2>
+    <p></p>
+
+    <div id="Buyer" class="w3-container w3-border user">
+        <h2></h2>
+        <section class="h-100">
+            <div class="container h-100">
+                <div class="row justify-content-md-center h-100">
+                    <div class="card-wrapper">
+                        <div class="brand">
+						<img src="{% static  'account/img/logo.png'%}">
+                        </div>
+                        <div class="card fat">
+                            <div class="card-body">
+                                <h4 class="card-title">Login</h4>
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <div id="Seller" class="w3-container w3-border user" style="display:none">
+        <h2></h2>
+        <section class="h-100">
+            <div class="container h-100">
+                <div class="row justify-content-md-center h-100">
+                    <div class="card-wrapper">
+                        <div class="brand">
+                           <img src="{% static  'account/img/logo.png'%}">
+                        </div>
+                        <div class="card fat">
+                            <div class="card-body">
+                                <h4 class="card-title">Login</h4>
+                                <form method="POST" action="">
+
+                                    <div class="form-group">
+                                        {% csrf_token %}
+                                        {{ form.as_p }}
+                                    </div>
+
+                                    <div class="form-group no-margin">
+                                        <button type="submit" class="btn btn-primary btn-block" value="login_seller">
+                                            Login
+                                        </button>
+                                    </div>
+                                    <div class="margin-top20 text-center">
+									Don't have an account? <a href="{% url 'register_seller' %}">Create One</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="footer">
+                            Copyright &copy; 2017 &mdash; Sample project
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/my-login.js"></script>
+</div>
+
+   
+                        <div class="footer">
+                            Copyright &copy; 2017 &mdash; Sample project
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/my-login.js"></script>
+</div>
+
+
+
+    <script>
+        function openUser(evt, userType) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("user");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(userType).style.display = "block";
+            evt.currentTarget.className += " w3-red";
+        }
+    </script>
+</div>
+</body>
+</html>
